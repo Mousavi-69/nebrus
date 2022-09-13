@@ -1,7 +1,8 @@
 import {createRouter, createWebHistory} from "vue-router"
-import HelloWorldVue from "../components/HelloWorld.vue";
+import Heder from "../components/Heder.vue";
+import MainPageVue from "../pages/MainPage.vue";
 const routes =[
-    {path: "/", name: "HelloWorldVue", component: HelloWorldVue},
+    {path: "/", name: "MainPageVue", component: MainPageVue},
 
 ];
 const router = createRouter({
