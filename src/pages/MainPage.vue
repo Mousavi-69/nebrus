@@ -1,40 +1,41 @@
 <script setup lang="ts">
-    import { ref } from 'vue'
-import Header from '../components/Header.vue'
-    defineProps<{ msg: string }>()
-    
-    const count = ref(0)
-    </script>
-    
-    <template>
-        <header >dddddddddd</header>
-      <h1>{{ msg }}</h1>
-    
-      <div class="card">
-        <button type="button" @click="count++">count is {{ count }}</button>
-        <p>
-          Edit
-          <code>components/HelloWorld.vue</code> to test HMR
-        </p>
+import { ref } from "vue";
+import Header from "../components/Header.vue";
+import SelectCountery from "@/components/SelectCountery.vue";
+</script>
+
+<template>
+  <div class="w-auto h-screen bg-gray-200">
+    <Header></Header>
+    <div class="m-5 mb-10">
+      <div
+        class="w-full  h-32 mt-10 flex justify-between items-center rounded-3xl"
+      >
+        <img src="@/assets/arbaein.jpg" class="w-full h-full rounded-2xl" />
+        
       </div>
-    
-      <p>
-        Check out
-        <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-          >create-vue</a
-        >, the official Vue + Vite starter
-      </p>
-      <p>
-        Install
-        <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-        in your IDE for a better DX
-      </p>
-      <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
-    </template>
-    
-    <style scoped>
-    .read-the-docs {
-      color: #888;
-    }
-    </style>
-    
+    </div>
+    <SelectCountery
+      :src_img="'@/assets/aragh.jpg'"
+      :country="'عراقی'"
+    ></SelectCountery>
+    <SelectCountery
+      :src_img="'@/assets/lobnan.jpg'"
+      :country="'لبنانی'"
+    ></SelectCountery>
+    <SelectCountery
+      :src_img="'@/assets/lobnan.jpg'"
+      :country="'خلیجی'"
+    ></SelectCountery>
+    <div class="m-5">
+      <div
+        class="w-full bg-black h-32  flex justify-between items-center rounded-3xl"
+      >
+        <img src="@/assets/vip.jpeg" class="w-36 h-full rounded-l-2xl" />
+        <h3 class="pr-5 text-4xl font-bold text-white ml-10 text-center">
+          دوره های ویژه
+        </h3>
+      </div>
+    </div>
+  </div>
+</template>
